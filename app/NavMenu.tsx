@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./NavMenu.module.css";
+import { SignInButton } from "@/components/buttons";
 
 export default function NavMenu(): JSX.Element {
   return (
@@ -17,6 +18,9 @@ export default function NavMenu(): JSX.Element {
         </li>
         <li>
           <Link href="/users">Users</Link>
+        </li>
+        <li>
+          <SignInButton />
         </li>
       </ul>
     </nav>
