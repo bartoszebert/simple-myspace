@@ -11,7 +11,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const posts: Post[] = await fetch("http://localhost:3000/api/content").then(
+  const posts: Post[] = await fetch(`${process.env.API_URL}/content`).then(
     (res) => res.json()
   );
 
@@ -21,7 +21,7 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
-  const posts: Post[] = await fetch("http://localhost:3000/api/content").then(
+  const posts: Post[] = await fetch(`${process.env.API_URL}/content`).then(
     (res) => res.json()
   );
 
