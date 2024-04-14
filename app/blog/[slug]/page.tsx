@@ -10,15 +10,15 @@ interface PageProps {
   params: Post;
 }
 
-export async function generateStaticParams() {
-  const posts: Post[] = await fetch(`${process.env.API_URL}/content`).then(
-    (res) => res.json()
-  );
+// export async function generateStaticParams() {
+//   const posts: Post[] = await fetch(`${process.env.API_URL}/content`).then(
+//     (res) => res.json()
+//   );
 
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
+//   return posts.map((post) => ({
+//     slug: post.slug,
+//   }));
+// }
 
 export default async function BlogPostPage({ params }: PageProps) {
   const posts: Post[] = await fetch(`${process.env.API_URL}/content`).then(
