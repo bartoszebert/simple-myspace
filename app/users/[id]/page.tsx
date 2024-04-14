@@ -1,6 +1,8 @@
 // import FollowButton from '@/components/FollowButton/FollowButton';
-import { prisma } from '@/lib/prisma';
-import { Metadata } from 'next';
+import { prisma } from "@/lib/prisma";
+import { Metadata } from "next";
+import Image from "next/image";
+import styles from './page.module.css'
 
 interface Props {
   params: {
@@ -21,15 +23,17 @@ export default async function UserProfile({ params }: Props) {
     <div>
       <h1>{name}</h1>
 
-      <img
-        width={300}
-        src={image ?? '/mememan.webp'}
-        alt={`${name}'s profile`}
-      />
+      <div className={styles.imageWrapper}>
+        <Image
+          fill={true}
+          src={image ?? "/mememan.webp"}
+          alt={`${name}'s profile`}
+          className={styles.image}
+        />
+      </div>
 
       <h3>Bio</h3>
       <p>{bio}</p>
-
     </div>
   );
 }
