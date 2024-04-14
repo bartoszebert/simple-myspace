@@ -9,7 +9,7 @@ export default function About(): JSX.Element {
   return (
     <main>
       <h1>About</h1>
-      <p>This is a copy of a popular social media platform .</p>
+      <p>This is a copy of an old popular social media platform named MySpace.</p>
     </main>
   );
 }

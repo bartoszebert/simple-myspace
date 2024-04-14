@@ -14,9 +14,9 @@ export default function NavMenu(): JSX.Element {
         <li>
           <Link href="/about">About</Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/blog">Blog</Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/users">Users</Link>
         </li>
