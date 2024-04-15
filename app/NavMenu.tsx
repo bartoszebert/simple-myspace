@@ -8,7 +8,7 @@ export default function NavMenu(): JSX.Element {
   return (
     <nav className={styles.nav}>
       <Link href="/">
-        <Image src="/logo.svg" width={216} height={30} alt="BartSpace " />
+        <Image src="/logo.svg" width={80} height={35} alt="BartSpace " />
       </Link>
       <ul className={styles.links}>
         <li>
