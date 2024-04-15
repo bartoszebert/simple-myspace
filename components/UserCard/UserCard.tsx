@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./UserCard.module.css";
+import Image from "next/image";
 
 interface Props {
   id: string;
@@ -7,8 +8,6 @@ interface Props {
   age: number | null;
   image: string | null;
 }
-
-import Image from "next/image"; // Import the Image component from next/image
 
 export default function UserCard({ id, name, age, image }: Props): JSX.Element {
   return (
@@ -21,10 +20,12 @@ export default function UserCard({ id, name, age, image }: Props): JSX.Element {
           className={styles.cardImage}
         />
       </div>
-      <h3>
-        <Link href={`/users/${id}`}>{name}</Link>
-      </h3>
-      <p>Age: {age}</p>
+      <div className={styles.cardContent}>
+        <h3>
+          <Link href={`/users/${id}`}>{name}</Link>
+        </h3>
+        <p>Age: {age}</p>
+      </div>
     </div>
   );
 }

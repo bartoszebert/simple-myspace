@@ -17,8 +17,8 @@ export default function FollowClient({ isFollowing, targetUserId }: Props) {
 
   const follow = async () => {
     setIsFetching(true);
-    
-    const res = await fetch("/api/follow/", {
+
+    await fetch("/api/follow/", {
       method: "POST",
       body: JSON.stringify({ targetUserId }),
       headers: {
@@ -34,7 +34,7 @@ export default function FollowClient({ isFollowing, targetUserId }: Props) {
   const unfollow = async () => {
     setIsFetching(true);
 
-    const res = await fetch(`/api/follow?targetUserId=${targetUserId}`, {
+    await fetch(`/api/follow?targetUserId=${targetUserId}`, {
       method: "DELETE",
     });
 
